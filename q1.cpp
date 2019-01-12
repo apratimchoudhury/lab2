@@ -83,6 +83,12 @@ class LinkedList
 	}
 	void insertAt(int pos, int value)
 	{
+	    int n=countItems();
+	    if(pos>n)
+	    {
+	        cout<<"The linked list does not contain these many items"<<endl;
+	        return;
+	    }
 	    //Reach the place before the position
 	    Node *current=head;
 	    int i=1;
@@ -118,6 +124,12 @@ class LinkedList
 	{
 	    int i=1;
 	    int j=1;
+	    int n=countItems();
+	    if(pos>n)
+	    {
+	        cout<<"The linked list does not contain these many items"<<endl;
+	        return;
+	    }
     	//for all cases except position=1
     	//reach the nodes before and after the node to be deleted 
     	if(pos!=1)
@@ -200,7 +212,8 @@ int main()
 	l1.deleteAt(1);
 	l1.display();
 	l1.countItems();
-	
+	l1.insertAt(5,8);
 	
 	return 0;
 }
+
