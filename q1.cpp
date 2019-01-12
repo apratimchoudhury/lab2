@@ -83,6 +83,7 @@ class LinkedList
 	}
 	void insertAt(int pos, int value)
 	{
+	    //if position given is more than size of linked list
 	    int n=countItems();
 	    if(pos>n)
 	    {
@@ -124,6 +125,7 @@ class LinkedList
 	{
 	    int i=1;
 	    int j=1;
+	    //if position given is more than size of linked list
 	    int n=countItems();
 	    if(pos>n)
 	    {
